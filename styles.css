@@ -1,0 +1,100 @@
+body {
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    background-color: #3b3838;
+}
+
+h1 {
+    color: white;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#categoryInput {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#searchButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#searchButton:hover {
+    background-color: goldenrod;
+
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 50px;
+    margin-top: 20px;
+    padding: 50px;
+}
+
+.image-container {
+    position: relative;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s;
+    border-radius: 10px 10px 0 0;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.image-container p {
+    margin: 10px 0px 0px 0px;
+}
+
+.image-container a {
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0px 10px 0px;
+    transition: color 0.3s;
+}
+
+.image-container a:hover {
+    color: goldenrod;
+}
+@media only screen and (max-width:700px){
+    #searchButton {
+        margin-top: 25px;
+    }
+    .gallery{
+        margin-top: 0;
+    }
+}
